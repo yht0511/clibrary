@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	ErrorDocument 404 /404.html
+	RewriteRule ^$ /php/index.php
+	RewriteRule ^search/?(.*)$ /php/search.php$1
+	RewriteRule ^book/([0-9]*)/(.*)$ /php/book.php?arg1=$1&arg2=$2
+	RewriteRule ^dl/(.*)$ /php/download.php?arg1=$1
+	RewriteRule ^send(.*)$ /php/sendEmail.php$1
+	RewriteRule ^emailSetting$ /php/emailSetting.php
+	RewriteRule ^donation$ /php/donation.php
+	RewriteRule ^about$ /php/about.php
+	Options All -Indexes
+	RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]  
+	RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]  
+	RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})  
+	Options +FollowSymLinks  
+</IfModule>

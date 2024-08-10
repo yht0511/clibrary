@@ -1,0 +1,224 @@
+body {
+    padding-top: 80px;
+}
+
+/* 图书项目 */
+.bookItem {
+    position: relative;
+    left: 15%;
+    height: 200px;
+    width: 70%;
+    margin-bottom: 10px;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+.bookItem * {
+    display: inline-block;
+    /* cursor: pointer; */
+}
+
+.booknum {
+    display: none;
+}
+
+.bookname {
+    position: absolute;
+    left: 120px;
+    top: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+    max-width: calc(100% - 110px);
+}
+
+.bookname:hover {
+    text-decoration: underline;
+}
+
+.bookauthors {
+    position: absolute;
+    left: 120px;
+    top: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+    max-width: calc(100% - 110px);
+    color: rgb(118, 118, 118);
+    font-style: italic;
+    font-size: 17px;
+}
+
+.bookpublisher {
+    position: absolute;
+    left: 120px;
+    top: 75px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+    max-width: calc(100% - 110px);
+    color: rgb(118, 118, 118);
+    font-style: italic;
+    font-size: 17px;
+}
+
+.bookcategory {
+    position: absolute;
+    left: 120px;
+    top: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+    max-width: calc(100% - 110px);
+    color: rgb(118, 118, 118);
+    font-style: italic;
+    font-size: 17px;
+}
+
+.bookyear,
+.booklanguage,
+.bookformat,
+.booksize {
+    position: relative;
+    display: inline-block;
+    padding: 3px 5px;
+    font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    line-height: 10px;
+    color: #24292f;
+    vertical-align: middle;
+    background-color: #f6f8fa;
+    border: solid 1px rgba(175, 184, 193, 0.2);
+    border-bottom-color: rgba(175, 184, 193, 0.2);
+    border-radius: 2px;
+    box-shadow: inset 0 -1px 0 rgba(175, 184, 193, 0.2);
+    top: 145px;
+    left: 120px;
+    margin-right: 5px;
+}
+
+.bookinterestScore {
+    position: absolute;
+    top: 125px;
+    left: 120px;
+    font-size: 15px;
+    color: rgb(118, 118, 118);
+}
+
+.bookqualityScore {
+    position: absolute;
+    top: 125px;
+    left: 180px;
+    font-size: 15px;
+    color: rgb(118, 118, 118);
+}
+
+.bookinterestScore::before {
+    content: "趣味:";
+
+}
+
+.bookqualityScore::before {
+    content: "质量:";
+}
+
+.bookbookHref {
+    display: none;
+}
+
+.bookcoverPath {
+    position: absolute;
+    left: 5px;
+    top: 25px;
+    height: 150px;
+    width: 100px;
+    z-index: 1;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(201, 241, 203);
+}
+
+.bookdetail {
+    position: absolute;
+    left: 0px;
+    top: 263px;
+    cursor: default;
+}
+
+.dlButton {
+    position: absolute;
+    padding: 10px 30px;
+    left: 15%;
+    background-color: #2a86ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.emailButton {
+    position: absolute;
+    padding: 10px 30px;
+    left: 15%;
+    margin-left: 100px;
+    background-color: #3bb839;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+#searchBox {
+    position: absolute;
+    width: 60%;
+    height: 40px;
+    top: 10px;
+    left: 20%;
+    overflow: hidden;
+    z-index:3;
+}
+
+#searchCommit {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 10%;
+    background-color: rgb(136, 203, 242);
+    text-align: center;
+    line-height: 40px;
+    cursor:pointer;
+}
+
+#searchInput {
+    width: max-content;
+    height: 100%;
+    width: 90%;
+    padding: 0px;
+    border: 0px;
+    line-height: 30px;
+    font-size: 25px;
+    background-color: white;
+}
+
+@media only screen and (max-width: 550px) {
+    .bookItem {
+        position: relative;
+        left: 5%;
+        height: 200px;
+        width: 90%;
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+
+    .dlButton {
+        left: 5%;
+    }
+
+    #searchBox {
+        position: absolute;
+        width: 60%;
+        height: 40px;
+        left: 20%;
+    }
+}

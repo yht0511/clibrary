@@ -1,0 +1,174 @@
+body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    font-family: "Microsoft YaHei";
+}
+
+html {
+    background-color: rgb(244, 247, 247);
+}
+
+/* 页面上栏 */
+#head {
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    height: 50px;
+    width: 100%;
+    /* background-color: rgba(10, 96, 177, 0.705); */
+    /* background-color: rgb(227, 248, 244); */
+}
+
+#head * {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgb(6, 6, 6);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#head *:hover {
+    background-color: rgb(229, 253, 243);
+}
+
+#head .goHome {
+    margin-left: 10px;
+    cursor: pointer;
+    border: 1px solid green;
+}
+
+#head .libraryName {
+    position: absolute;
+    left: 50%;
+    cursor: default;
+    transform: translateX(-50%) translateY(-50%) !important;
+    display: none;
+}
+
+#head .ipDownloadNum {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    border: 1px solid green;
+}
+
+#head .hide {
+    display: block;
+    cursor: pointer;
+}
+
+#head .hiddenItems {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    display: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border: 2px solid black;
+    width: 50%;
+    max-width: 200px;
+}
+
+#head .hiddenItems * {
+    margin: 0;
+    padding: 5;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+}
+
+#head .hiddenItems *:last-child {
+    border-bottom: 0px solid black;
+}
+
+#head .ipDownloadNum:hover~.hiddenItems {
+    display: block;
+}
+
+#head .hiddenItems:hover {
+    display: block;
+}
+
+/* 书封面缺失写字 */
+.bookImg {
+    z-index: 1;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(201, 241, 203);
+}
+
+/* Alert框 */
+.successAlert,
+.errorAlert {
+    width: 20%;
+    min-width: 350px;
+    height: 70px;
+    font-size: 20px;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    line-height: 70px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.successAlert {
+    background-color: rgba(40, 246, 54, 0.785);
+}
+
+.errorAlert {
+    background-color: rgb(247, 106, 75);
+}
+
+/* Notice */
+.noticeBox {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    z-index: 0;
+    height: 50px;
+    width: calc(70% - 80px);
+    border: 3px dotted green;
+    padding-left: 10px;
+    padding-right: 60px;
+    transform: translateX(-50%);
+    font-size: 30px;
+    line-height: 50px;
+    /*     overflow:hidden; */
+}
+
+.noticeBoxContent {
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.noticeBoxContent::-webkit-scrollbar {
+    height: 0px;
+}
+
+.noticeBoxHide {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 15px;
+    width: 50px;
+    text-align: center;
+    border-left: 3px dotted green;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+    .noticeBox {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        z-index: 0;
+        height: 50px;
+        width: calc(100% - 90px);
+    }
+
+}

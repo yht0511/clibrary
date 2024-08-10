@@ -1,0 +1,55 @@
+html,body{
+    background-color: #fff!important;
+}
+#clibraryImg{
+    position: relative;
+    width:60%;
+    left:20%;
+    top:0px;
+}
+#clibraryDetail{
+    position: relative;
+    width:40%;
+    text-align: center;
+    left:30%;
+    z-index:1;
+    font-style: italic;
+    font-size: 20px;
+    color:#90A5A8;
+}
+@media only screen and (max-width: 850px) {
+    #clibraryImg {
+            position: relative;
+            width: 90%;
+            left: 5%;
+            top: 40px;
+        }
+        #clibraryDetail {
+            width: 90%;
+            left: 5%;
+            top:20px;
+        }
+}
+#head{
+    background-color: #fff !important;
+}
+.goHome,.libraryName{
+    display:none!important;
+}
+#searchBox{
+    position: relative;
+    top:20px;
+    width:40%;
+    left:30%;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 960px) {
+    #searchBox {
+        position: relative;
+        width: 90%;
+        height: 40px;
+        left: 5%;
+    }
+}

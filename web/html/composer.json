@@ -1,0 +1,7 @@
+{
+    "require": {
+        "meilisearch/meilisearch-php": "^0.24.2",
+        "guzzlehttp/guzzle": "^7.5",
+        "http-interop/http-factory-guzzle": "^1.0"
+    }
+}
