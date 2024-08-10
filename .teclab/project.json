@@ -1,0 +1,15 @@
+
+{
+    "title":"Clibrary图书馆计划",
+    "name":"Clibrary",
+    "progress": 100,
+    "status": "维护",
+    "website":"https://library.teclab.org.cn",
+    "image":"https://raw.githubusercontent.com/yht0511/web/pic/4.png",
+    "project_manager":{
+        "version":1,
+        "sync":true,
+        "auto_analyze_progress":true
+    }
+}
+
