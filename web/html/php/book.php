@@ -47,7 +47,8 @@
     foreach ($displayItems as $i => $i_value) {
         if ($data[$i_value] === null || $data[$i_value] == 'undefined') $data[$i_value] = '未知';
         if ($i_value == 'coverPath') {
-            $data[$i_value] = applyFiles(array("{\"path\": \"$data[$i_value]\", \"ip\":\"$ip\", \"holdTime\":$imgHoldTime}"))[0];
+            $host=$_SERVER['HTTP_HOST'];
+            $data[$i_value] = applyFiles(array("{\"path\": \"$data[$i_value]\", \"ip\":\"$ip\", \"holdTime\":$imgHoldTime,\"host\":\"$host\"}"))[0];
             echo '<img class="book' . $i_value . '" src="' . $data[$i_value] . '"/>';
             if (strpos($data[$i_value], '/img/cover-not-exists.png')!==false) {
                 echo '<div class="bookcoverPath">书</div>';

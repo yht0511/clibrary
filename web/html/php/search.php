@@ -61,6 +61,7 @@
   }
 
   $imgArray = array();
+  $host=$_SERVER['HTTP_HOST'];
   foreach ($res as $x => $x_value) {
     $itemReturn = '<div class="bookItem"><div class="booknum">' . $x . '</div>';
     foreach ($x_value as $y => $y_value) {
@@ -71,7 +72,7 @@
       if ($y != 'coverPath')
         $itemReturn .= '<div class="book' . $y . '">' . $y_value . '</div>';
       else
-        array_push($imgArray, "{\"path\": \"$y_value\", \"ip\":\"$ip\", \"holdTime\":$imgHoldTime}");
+        array_push($imgArray, "{\"path\": \"$y_value\", \"ip\":\"$ip\", \"holdTime\":$imgHoldTime,\"host\":\"$host\"}");
     }
     array_push($return, $itemReturn);
   }

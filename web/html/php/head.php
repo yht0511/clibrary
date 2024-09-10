@@ -14,5 +14,6 @@ echo '<div class="hiddenItems hide">';
 echo '<div class="setEmail hide more" onclick=\'window.location="/emailSetting";\'>邮箱设置</div>';
 // echo '<div class="donation hide more"  onclick=\'window.location="/donation";\'>捐款</div>';
 echo '<div class="donation hide more"  onclick=\'window.location="/about";\'>关于本站</div>';
+echo '<div class="donation hide more"  onclick=\'window.location="https://teclab.org.cn";\'>Teclab</div>';
 echo '</div></div>';
 ?>

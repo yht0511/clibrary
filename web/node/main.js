@@ -7,13 +7,13 @@ const path = require("path");
 const random = require('string-random');
 const nodemailer = require("nodemailer");
 
-const filePassword = '文件服务器密码'
 const url_root="https://librarycdn.teclab.org.cn/";
 const file_root = "/Data/Books-Spider/";
 const mapping = {
     "library.teclab.org.cn": "https://librarycdn.teclab.org.cn/",
     "book.yht.life": "https://bookcdn.yht.life/",
-    "192.168.1.4:3080": "http://192.168.1.4:3081/"
+    "192.168.1.4:3080": "http://192.168.1.4:3081/",
+    "10.170.117.160:3080":"http://10.170.117.160:3081/"
 }
 
 var app = express();

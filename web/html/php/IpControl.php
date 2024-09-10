@@ -48,7 +48,12 @@ function createNewIp($ip)
 {
     global $daliyDownloadNum;
     $time= time();
-    $sql = "INSERT INTO IPData (ip, leftNum, totalNum, refreshDate, status) values (\"$ip\",$daliyDownloadNum,$daliyDownloadNum,$time,1);";
+    $ddn = $daliyDownloadNum;
+    # 10.开头的ip下载数量为10000
+    if (substr($ip, 0, 3) == "10.") {
+        $ddn = 10000;
+    }
+    $sql = "INSERT INTO IPData (ip, leftNum, totalNum, refreshDate, status) values (\"$ip\",$ddn,$ddn,$time,1);";
     $data = execMysql($sql);
     return $data;
 }
