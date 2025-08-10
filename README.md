@@ -2,7 +2,6 @@
 
 ## 基本信息
 
-依赖项目:[Zlibrary爬虫项目](https://github.com/yht050511/Zlibrary_Spider)
 
 项目目标:将爬取到的zlib数据整合，提供图书馆服务。
 
